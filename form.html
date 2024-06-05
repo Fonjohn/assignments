@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Rounded rectangle container for the form */
+        .form-container {
+            background-color: #f1f1f1;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* select style */
+        select {
+            background-color: #272727;
+            color: #b3b3b3;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* option styles */
+        select option[value="red"] {
+            background-color: #760000;
+            color: red;
+        }
+        select option[value="orange"] {
+            background-color: #ac3f00;
+            color: #ff8000;
+        }
+        select option[value="yellow"] {
+            background-color: #bd9100;
+            color: #fbff00;
+        }
+        select option[value="green"] {
+            background-color: #006e04;
+            color: #09ff00;
+        }
+        select option[value="blue"] {
+            background-color: #0022aa;
+            color: #1170ff;
+        }
+        select option[value="indigo"] {
+            background-color: #330099;
+            color: #6532ff;
+        }
+        select option[value="violet"] {
+            background-color: #5a0092;
+            color: #d900ff;
+        }
+
+        /* table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table td[value="red"] {
+            background-color: #760000;
+            color: #ff0000;
+        }
+        table td[value="orange"] {
+            background-color: #ac3f00;
+            color: #ff8000;
+        }
+        table td[value="yellow"] {
+            background-color: #bd9100;
+            color: #fbff00;
+        }
+        table td[value="green"] {
+            background-color: #006e04;
+            color: #09ff00;
+        }
+        table td[value="blue"] {
+            background-color: #0022aa;
+            color: #1170ff;
+        }
+        table td[value="indigo"] {
+            background-color: #330099;
+            color: #6532ff;
+        }
+        table td[value="violet"] {
+            background-color: #5a0092;
+            color: #d900ff;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+            
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="http://itec315.frostburg.edu/users/mflinn/630/handler.php">
+        <img alt="complete this form" src="complete_this_form.png" width="100%">
+        <br><br>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state"><br>
+        <label for="zip">Zip code:</label><br>
+        <input type="text" id="zip" name="zip"><br>
+        <br>
+        <label for="choices">Select your favorite color:</label><br>
+        <select id="choices" name="fav_color">
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="indigo">Indigo</option>
+            <option value="violet">Violet</option>
+        </select>
+        <br><br>
+        <label for="colors">Color table:</label><br>
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Swatch</th>
+            </tr>
+            <tr>
+                <td>Red</td>
+                <td value="red"></td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td value="orange"></td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td value="yellow"></td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td value="green"></td>
+            </tr>
+            <tr>
+                <td>Blue</td>
+                <td value="blue"></td>
+            </tr>
+            <tr>
+                <td>Indigo</td>
+                <td value="indigo"></td>
+            </tr>
+            <tr>
+                <td>Violet</td>
+                <td value="violet"></td>
+            </tr>
+        </table>
+        <br><br>
+        <label for="week">Select your favorite day of the week:</label><br>
+        <input type="radio" id="sunday" name="fav_day" value="sunday">
+        <label for="sunday">Sunday</label><br>
+        <input type="radio" id="monday" name="fav_day" value="monday">
+        <label for="monday">Monday</label><br>
+        <input type="radio" id="tuesday" name="fav_day" value="tuesday">
+        <label for="tuesday">Tuesday</label><br>
+        <input type="radio" id="wednesday" name="fav_day" value="wednesday">
+        <label for="wednesday">Wednesday</label><br>
+        <input type="radio" id="thursday" name="fav_day" value="thursday">
+        <label for="thursday">Thursday</label><br>
+        <input type="radio" id="friday" name="fav_day" value="friday">
+        <label for="friday">Friday</label><br>
+        <input type="radio" id="saturday" name="fav_day" value="saturday">
+        <label for="saturday">Saturday</label><br><br>
+
+        <label for="week">create your favorite single digit number in dot matrix:</label><br>
+        <img src="dot_matrix.png" width="80%"><br>
+        <input type="checkbox" checked name="1,1"><input type="checkbox" checked name="1,2"><input type="checkbox" checked name="1,3"><input type="checkbox" checked name="1,4"><input type="checkbox" checked name="1,5"><br>
+        <input type="checkbox" checked name="2,1"><input type="checkbox" name="2,2"><input type="checkbox" name="2,3"><input type="checkbox" name="2,4"><input type="checkbox" checked name="2,5"><br>
+        <input type="checkbox" name="3,1"><input type="checkbox" name="3,2"><input type="checkbox" name="3,3"><input type="checkbox" checked name="3,4"><input type="checkbox" name="3,5"><br>
+        <input type="checkbox" name="4,1"><input type="checkbox" name="4,2"><input type="checkbox" checked name="4,3"><input type="checkbox" name="4,4"><input type="checkbox" name="4,5"><br>
+        <input type="checkbox" name="5,1"><input type="checkbox" checked name="5,2"><input type="checkbox" name="5,2"><input type="checkbox" name="5,4"><input type="checkbox" name="5,5"><br>
+        <input type="checkbox" name="6,1"><input type="checkbox" checked name="6,2"><input type="checkbox" name="6,2"><input type="checkbox" name="6,4"><input type="checkbox" name="6,5"><br>
+        <input type="checkbox" name="7,1"><input type="checkbox" checked name="7,2"><input type="checkbox" name="7,2"><input type="checkbox" name="7,4"><input type="checkbox" name="7,5"><br><br>
+                
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
