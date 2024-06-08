@@ -1,1 +1,1 @@
-<?php include_once("johnsweb.html"); ?>
+<?php include_once("public/johnsweb.html"); ?>
